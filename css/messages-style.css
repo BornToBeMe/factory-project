@@ -1,0 +1,21 @@
+.container {
+  width: 820px;
+  box-shadow: 0 0 15px 5px #eff0f1; }
+
+.messages {
+  width: 600px; }
+  .messages a {
+    color: #8dca75; }
+  .messages div:first-child {
+    border-bottom: none;
+    margin: 85px 0 36px 0; }
+  .messages div:last-child {
+    margin: 0 0 85px 0; }
+  .messages p {
+    margin: 24px 0 35px 0; }
+
+.margin-0 {
+  margin: 0;
+  border-bottom: 1px solid #f1f2f3; }
+
+/*# sourceMappingURL=messages-style.css.map */

@@ -1,0 +1,62 @@
+.container {
+  width: 820px;
+  box-shadow: 0 0 15px 5px #eff0f1; }
+
+.username {
+  margin-bottom: 0; }
+
+.background-img {
+  width: 100%;
+  height: 215px;
+  background: url(../img/cover-image.jpg) no-repeat;
+  background-size: 100%; }
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  margin-top: -60px;
+  border-radius: 5px; }
+
+.information {
+  text-align: center;
+  margin-bottom: 40px; }
+
+.your-message {
+  width: 600px;
+  height: 164px;
+  resize: none;
+  padding: 10px;
+  border-radius: 5px; }
+
+.btn-block {
+  width: 300px;
+  margin: 10px auto 35px auto; }
+
+.btn-color {
+  color: #fff;
+  background: #8dca75;
+  background: -webkit-linear-gradient(#8dca75, #87b05f);
+  background: -moz-linear-gradient(#8dca75, #87b05f);
+  background: -o-linear-gradient(#8dca75, #87b05f);
+  background: linear-gradient(#8dca75, #87b05f); }
+
+.messages {
+  width: 600px; }
+  .messages div:first-child p {
+    margin-top: 0; }
+  .messages p {
+    margin: 25px 0 30px 0; }
+
+.margin-0 {
+  margin: 0;
+  border-bottom: 1px solid #f1f2f3; }
+
+.center {
+  text-align: center; }
+
+.all-messages {
+  margin: 45px 0 80px 0; }
+  .all-messages a {
+    color: #8dca75; }
+
+/*# sourceMappingURL=index-style.css.map */

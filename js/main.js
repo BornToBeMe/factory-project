@@ -1,38 +1,49 @@
 $(function() {
 
-	function getQueryVariable(variable)
-	{
-       var query = window.location.search.substring(1);
-       var vars = query.split("&");
-       for (var i=0;i<vars.length;i++) {
-               var pair = vars[i].split("=");
-               if(pair[0] == variable){return pair[1];}
-       }
-       return(false);
-	}
-
-	getQueryVariable("yourname");
-
-	console.log(getQueryVariable("yourname"));
-
-	var name = getQueryVariable("yourname");
-	if(typeof name !== 'undefined') {
-		console.log("name" + name);
-		$("#username").text(name);
-	}
-
-	getQueryVariable("yourmail");
-
-	console.log(getQueryVariable("yourmail"));
-
-	var mail = getQueryVariable("yourmail");
-	if (typeof name !== "undefined") {
-		$(".usermail").text(unescape(mail));
-	}
+	var login = [];
 
 	var storedMessages = [];
 
+
+	login = JSON.parse(localStorage.getItem("login-info"));
+
+	// storedMessages = JSON.parse(localStorage.getItem("every-message"));
+
+	console.log(login);
+
 	var limit = 5;
+
+	var username = $("#username");
+	var usermail = $(".usermail");
+
+	username.text(login[0]);
+	usermail.text(login[1]);
+
+
+	document.getElementById('edit1').addEventListener('change', readCover, true);
+		function readCover(){
+	   		var file = document.getElementById("edit1").files[0];
+	   		var reader = new FileReader();
+	    	reader.onloadend = function(){
+	        document.getElementById('background-img').style.backgroundImage = "url(" + reader.result + ")";        
+	    }
+	    if(file){
+	        reader.readAsDataURL(file);
+	    }else{
+	    }
+	};
+	document.getElementById('edit2').addEventListener('change', readProfile, true);
+		function readProfile(){
+	   		var file = document.getElementById("edit2").files[0];
+	   		var reader = new FileReader();
+	    	reader.onloadend = function(){
+	        document.getElementById('profile-img').style.backgroundImage = "url(" + reader.result + ")";        
+	    }
+	    if(file){
+	        reader.readAsDataURL(file);
+	    }else{
+	    }
+	};
 
 	$("#submit-button").on("click", function(e) {
 		e.preventDefault();
@@ -42,21 +53,23 @@ $(function() {
 			storedMessages.push(message);
 		}
 
-		$('.messages > p:gt('+(limit-1)+')').hide();
-		if ($('.messages > p').length > limit) {
-		    $('.all-messages').show();
-		}
+		$(".messages > p:gt("+(limit-1)+")").hide();
+
 		localStorage.setItem("every-message", JSON.stringify(storedMessages));
+		$(".your-message").val("");
 
 	})
-
-	storedMessages = JSON.parse(localStorage.getItem("every-message"));
-
+	
 	console.log(storedMessages);
 
 	$.each(storedMessages, function( index, value ) {
 		var storagemessages = $(".messages").prepend("<p>" + storedMessages[index] + "</p>");
 		$('.messages > p:gt('+(limit-1)+')').hide();
+	});
+
+	$(".logout").on("click", function(e) {
+		localStorage.clear();
+		$(location).attr("href", "./login.html");
 	});
 	
 

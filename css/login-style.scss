@@ -1,3 +1,12 @@
+@font-face {
+  font-family: roboto;
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
+body {
+  font-family: roboto;
+}
+
 .container {
   width: 820px;
   height: 100vh;
@@ -10,7 +19,7 @@
   background-color: #fff;
   width: 360px;
   text-align: center;
-  box-shadow: 10px 10px 5px #eff0f1;
+  box-shadow: 0 0 15px 5px #eff0f1;
   height: 410px;
 
   h2 {

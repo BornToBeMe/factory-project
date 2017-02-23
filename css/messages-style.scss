@@ -1,30 +1,59 @@
+@font-face {
+  font-family: roboto;
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
+body {
+  font-family: roboto;
+}
+
 .container {
 	width: 820px;
 	box-shadow: 0 0 15px 5px #eff0f1;
+	margin: 30px auto;
 }
 
-.messages {
-	width: 600px;
+.col-620 {
+	width: 620px;
+}
+
+.no-float {
+	float: none;
+}
+
+.every-message {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+
+	li {
+		padding: 25px 0 35px 0;
+		border-bottom: 1px solid #f1f2f3;
+	}
+
+	li:first-child {
+		padding-top: 0;
+	}
+}
+
+.back {
+	margin-top: 85px;
+	margin-bottom: 60px;
 
 	a {
 		color: #8dca75;
 	}
-
-	div:first-child {
-		border-bottom: none;
-		margin: 85px 0 36px 0;
-	}
-
-	div:last-child {
-		margin: 0 0 85px 0
-	}
-
-	p {
-		margin: 24px 0 35px 0;
-	}
 }
 
-.margin-0 {
-	margin: 0;
-	border-bottom: 1px solid #f1f2f3;
+.clear {
+	margin: 50px 0;
+}
+
+.btn-color {
+  color: #fff;
+  background: #8dca75;
+  background: -webkit-linear-gradient(#8dca75, #87b05f);
+  background: -moz-linear-gradient(#8dca75, #87b05f);
+  background: -o-linear-gradient(#8dca75, #87b05f);
+  background: linear-gradient(#8dca75, #87b05f);
 }

@@ -2,6 +2,10 @@ $(function() {
 
 	var login = [];
 
+	if(localStorage.getItem("login-info") != null) {
+		login = JSON.parse(localStorage.getItem("login-info"));
+	}
+
 	if(login == "") {
 
 		$("#login").on("click", function(e) {
@@ -17,6 +21,8 @@ $(function() {
 			localStorage.setItem("login-info", JSON.stringify(login));
 
 		});
+	} else {
+		$(location).attr("href", "./index.html");
 	}
 	console.log(login);
 

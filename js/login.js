@@ -1,5 +1,7 @@
 $(function() {
 
+	"use strict";
+	
 	var login = [];
 
 	if(localStorage.getItem("login-info") != null) {

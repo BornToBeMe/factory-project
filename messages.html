@@ -6,41 +6,54 @@
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/messages-style.css">
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="js/messages.js"></script>
 </head>
 <body>
-<div class="container">
-	<div class="row">
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-620 no-float center-block">
-			<div class="back">
-				<a href="index.html"><i class="glyphicon glyphicon-arrow-left"> Back to profile</i></a>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-620 no-float center-block">
+				<div class="back">
+					<a href="index.html"><i class="glyphicon glyphicon-arrow-left"> Back to profile</i></a>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-620 no-float center-block">
+				<ul class="every-message">
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-620 no-float center-block">
+				<div class="clear">
+					<button class="btn btn-lg btn-color btn-block" id="clear-button">Clear Messages</button>
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-620 no-float center-block">
-			<ul class="every-message">
-				<li>Postcards have been consistently one of the more popular collectibles and used as promotional materials. More and more business owners are turning to color postcards as a good way of promoting their products and services.</li>
 
-				<li>This is simply because postcards don't have to be opened. It won't get lumped in with all the mail envelopes that people usually toss without opening.</li>
+	<div class="modal fade" id="myModal" role="dialog">
+		<div class="modal-dialog">
 
-				<li>Postcards have been consistently one of the more popular collectibles and used as promotional materials. More and more business owners are turning to color postcards as a good way of promoting their products and services.</li>
-
-				<li>This is simply because postcards don't have to be opened. It won't get lumped in with all the mail envelopes that people usually toss without opening.</li>
-
-				<li>Postcards have been consistently one of the more popular collectibles and used as promotional materials. More and more business owners are turning to color postcards as a good way of promoting their products and services.</li>
-			</ul>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-620 no-float center-block">
-			<div class="clear">
-				<button class="btn btn-lg btn-color btn-block" id="clear-button">Clear Messages</button>
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Edit message</h4>
+				</div>
+				<div class="modal-body">
+					<textarea name="message" id="modal-input" maxlength="500"></textarea>
+					<button class="btn btn-lg btn-color" id="save-message">Save message</button>
+					<button class="btn btn-lg btn-color" id="delete-message">Delete message</button>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
 			</div>
+
 		</div>
 	</div>
-</div>
-</div>
 
 </body>
 </html>

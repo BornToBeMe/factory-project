@@ -7,60 +7,84 @@
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/index-style.css">
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="js/main.js"></script>
 </head>
 <body>
-<div class="container">
-	<div class="row">
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<div class="cover-img">
-				<img class="cover" src="img/cover-image.jpg" alt="#">
-				<input type="file" name="edit1" id="edit1" class="edit-cover">
-				<label for="edit1"><img src="img/edit.png" alt="#"></label>
-				<button class="logout"><i class="glyphicon glyphicon-log-out"><span class="log-out">Logout</span></i></button>
+	<div class="container container-lg">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="cover-img">
+					<img class="cover" src="img/cover-image.jpg" alt="#">
+					<input type="file" name="edit1" id="edit1" class="edit-cover">
+					<label for="edit1"><img src="img/edit.png" alt="#"></label>
+					<button class="logout"><i class="glyphicon glyphicon-log-out"><span class="log-out">Logout</span></i></button>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="profile-picture">
+					<img id="profile-img" src="img/profile-image.jpg" class="center-block">
+					<input type="file" name="edit2" id="edit2" class="edit-profile">
+					<label for="edit2"><img src="img/edit.png" alt="#"></label>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="information">
+					<h1 id="username"></h1>
+					<span class="usermail"></span>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="message clearfix">
+					<textarea class="your-message center-block" placeholder="Your message" maxlength="500""></textarea>
+					<button class="btn btn-lg btn-color btn-block" id="submit-button" type="submit">SUBMIT</button>
+					<span id="charNum"></span>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<ul class="messages center-block">
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="center all-messages">
+					<a href="messages.html">All messages <i class="glyphicon glyphicon-arrow-right"></i></a>
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<div class="profile-picture">
-				<img id="profile-img" src="img/profile-image.jpg" class="center-block">
-				<input type="file" name="edit2" id="edit2" class="edit-profile">
-				<label for="edit2"><img src="img/edit.png" alt="#"></label>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<div class="information">
-				<h1 id="username"></h1>
-				<span class="usermail"></span>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<div class="message">
-				<textarea class="your-message center-block" placeholder="Your message" maxlength="500"></textarea>
-				<button class="btn btn-lg btn-color btn-block" id="submit-button" type="submit">SUBMIT</button>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<ul class="messages center-block">
-				<li>Postcards have been consistently one of the more popular collectibles and used as promotional materials. More and more business owners are turning to color postcards as a good way of promoting their products and services.</li>
 
-				<li>This is simply because postcards don't have to be opened. It won't get lumped in with all the mail envelopes that people usually toss without opening.</li>
+	<div class="modal fade" id="myModal" role="dialog">
+		<div class="modal-dialog">
 
-				<li>Postcards have been consistently one of the more popular collectibles and used as promotional materials. More and more business owners are turning to color postcards as a good way of promoting their products and services.</li>
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Edit message</h4>
+				</div>
+				<div class="modal-body">
+					<textarea name="message" id="modal-input" maxlength="500"></textarea>
+					<button class="btn btn-lg btn-color" id="save-message">Save message</button>
+					<button class="btn btn-lg btn-color" id="delete-message">Delete message</button>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
 			</div>
-			<div class="center all-messages">
-				<a href="messages.html">All messages <i class="glyphicon glyphicon-arrow-right"></i></a>
-			</div>
+
 		</div>
 	</div>
-</div>
+
 
 </body>
 </html>

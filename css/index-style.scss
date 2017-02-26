@@ -7,11 +7,16 @@ body {
   font-family: roboto;
 }
 
-.container {
-	width: 820px;
-	box-shadow: 0 0 15px 5px #eff0f1;
-	margin: 30px auto;
+.container-lg {
+
+	@media screen and (min-width: 1200px) and (max-width: 1920px) {
+		max-width: 820px;
+		box-shadow: 0 0 15px 5px #eff0f1;
+		margin: 30px auto;
+	}
+
 }
+
 
 .username {
 	margin-bottom: 0;
@@ -21,14 +26,6 @@ body {
 	width: 100%;
 	height: 215px;
 }
-
-/* #background-img {
-	width: 100%;
-	height: 215px;
-	background: url(../img/cover-image.jpg) center top no-repeat;
-	background-size: cover;
-	position: relative;
-} */
 
 .logout {
 	position: absolute;
@@ -97,6 +94,11 @@ body {
 	margin-bottom: 40px;
 }
 
+.message {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
 .your-message {
 	width: 600px;
 	height: 164px;
@@ -107,7 +109,8 @@ body {
 
 .btn-block {
     width: 300px;
-    margin: 10px auto 35px auto;
+    margin: 10px auto 35px 0;
+    float: left;
 }
 
 .btn-color {
@@ -119,6 +122,11 @@ body {
     background: linear-gradient(#8dca75, #87b05f);
 }
 
+#charNum {
+	float: right;
+	margin-top: 20px;
+}
+
 .messages {
 	width: 600px;
 	list-style: none;
@@ -127,6 +135,7 @@ body {
 	li {
 		padding: 25px 0 30px 0;
 		border-bottom: 1px solid #f1f2f3;
+		position: relative;
 	}
 
 	li:first-child {
@@ -139,9 +148,27 @@ body {
 }
 
 .all-messages {
-	margin: 45px 0 80px 0;
+	margin-bottom: 80px;
 
 	a {
 		color: #8dca75;
 	}
+}
+
+.buttonModal {
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	width: 25px;
+	height: 25px;
+	padding: 0;
+	background-color: #000;
+	display: none;
+
+}
+.buttonModal:focus {
+	background-color: #000;
+}
+.buttonModal:hover {
+	background-color: #000;
 }

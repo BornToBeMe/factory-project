@@ -10,11 +10,17 @@ $(function() {
 
 	if(login == "") {
 
+		function validateEmail(email) {
+		    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		    return re.test(email);
+		}
+
+
 		$("#login").on("click", function(e) {
 			e.preventDefault();
 			var username = $("#inputName").val();
 			var usermail = $("#inputEmail").val();
-			if(username !== "" && usermail !== "") {
+			if(username !== "" && validateEmail(usermail)) {
 				login.push(username);
 				login.push(usermail);
 				$(location).attr("href", "./index.html");

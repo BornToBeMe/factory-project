@@ -14,15 +14,22 @@
 		<label for="yourname" class="sr-only">Your name</label>
 		<input type="text" id="inputName" class="form-control" name="yourname" placeholder="Your name" required autofocus>
 		<label for="yourmail" class="sr-only">Your email</label>
-		<input type="email" id="inputEmail" class="form-control" name="yourmail" placeholder="Email" required>
+		<input type="email" id="inputEmail" class="form-control" name="yourmail" required placeholder="Email">
 		<label for="inputPassword" class="sr-only">Your password</label>
 		<input type="password" id="inputPassword" class="form-control" placeholder="Password">
 		<button class="btn btn-lg btn-color btn-block" id="login" type="submit">LOGIN</button>
 	</form>
 </div>
 
+	<!-- Insert this line above script imports  -->
+	<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
 
-<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-<script src="js/login.js"></script>
+	<!-- normal script imports etc  -->
+	<script src="js/jquery.min.js"></script>  
+	<script src="js/login.js"></script>    
+
+	<!-- Insert this line after script imports -->
+	<script>if (window.module) module = window.module;</script>
+
 </body>
 </html>

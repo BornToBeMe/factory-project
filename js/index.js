@@ -98,7 +98,7 @@ $(function() {
 			} else {
 				$(".all-messages").show();
 			}
-		}
+		};
 
 		$("#submit-button").on("click", function(e) {
 			e.preventDefault();
@@ -128,11 +128,6 @@ $(function() {
 			checkMessages();
 		});
 
-		/* $.each(storedMessages, function( index, value ) {
-			storedMessages[index].on("click", function () {
-				console.log("message-shows");
-			});
-		}); */
 		$( "li" )
 		 .on("mouseenter", function() {
 		  $(this).find(".buttonModal").show();
@@ -152,6 +147,7 @@ $(function() {
 			storedMessages[$(this).data("id")] = $("#modal-input").val();
 			console.log(storedMessages[$(this).data("id")]);
 			localStorage.setItem("every-message", JSON.stringify(storedMessages));
+			location.reload();
 		});
 
 		$("#delete-message").on("click", function() {
@@ -160,6 +156,7 @@ $(function() {
 			console.log(position);
 			storedMessages.splice(position, 1);
 			localStorage.setItem("every-message", JSON.stringify(storedMessages));
+			location.reload();
 		});
 
 		$(".logout").on("click", function(e) {

@@ -33,6 +33,7 @@ $(function() {
 		storedMessages[$(this).data("id")] = $("#modal-input").val();
 		console.log(storedMessages[$(this).data("id")]);
 		localStorage.setItem("every-message", JSON.stringify(storedMessages));
+		location.reload();
 	});
 
 	$("#delete-message").on("click", function() {
@@ -41,6 +42,7 @@ $(function() {
 		console.log(position);
 		storedMessages.splice(position, 1);
 		localStorage.setItem("every-message", JSON.stringify(storedMessages));
+		location.reload();
 	});
 
 	$("#clear-button").on("click", function(e) {

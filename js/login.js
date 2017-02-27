@@ -24,6 +24,8 @@ $(function() {
 				login.push(username);
 				login.push(usermail);
 				$(location).attr("href", "./index.html");
+			} else if(validateEmail(usermail) == false) {
+				$("#inputEmail").css("border", "1px solid #FF3333");
 			}
 			console.log(login);
 			localStorage.setItem("login-info", JSON.stringify(login));
